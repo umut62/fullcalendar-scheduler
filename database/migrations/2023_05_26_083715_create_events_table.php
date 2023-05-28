@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 return new class extends Migration
 {
@@ -18,6 +19,24 @@ return new class extends Migration
             $table->dateTime('end');
             $table->timestamps();
         });
+
+        DB::table('events')->insert([
+            [
+                'title' => 'Example Event 1',
+                'start' => '2023-05-27 10:00:00',
+                'end' => '2023-05-27 12:00:00',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Example Event 2',
+                'start' => '2023-05-28 14:00:00',
+                'end' => '2023-05-28 16:00:00',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+
+        ]);
     }
 
     /**
