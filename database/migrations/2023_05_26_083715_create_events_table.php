@@ -14,29 +14,12 @@ return new class extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->string('title', 255);
             $table->dateTime('start');
             $table->dateTime('end');
+            $table->text('description');
             $table->timestamps();
         });
-
-        DB::table('events')->insert([
-            [
-                'title' => 'Example Event 1',
-                'start' => '2023-05-27 10:00:00',
-                'end' => '2023-05-27 12:00:00',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'title' => 'Example Event 2',
-                'start' => '2023-05-28 14:00:00',
-                'end' => '2023-05-28 16:00:00',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-
-        ]);
     }
 
     /**

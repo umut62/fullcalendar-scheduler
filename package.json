@@ -18,6 +18,7 @@
         "@fullcalendar/resource-timeline": "^6.1.8",
         "@fullcalendar/timegrid": "^6.1.8",
         "jquery-clock-timepicker": "^2.6.4",
-        "jquery-datetimepicker": "^2.5.21"
+        "jquery-datetimepicker": "^2.5.21",
+        "toastr": "^2.1.4"
     }
 }

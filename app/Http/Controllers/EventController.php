@@ -29,7 +29,20 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $title = $request->title;
+        $start = str_replace('/', '-', $request->start);
+        $end = str_replace('/', '-', $request->end);
+        $description = $request->description;
+
+        Event::create([
+            'title' => $title,
+            'start' => $start,
+            'end'   => $end,
+            'description' => $description
+        ]);
+
+        return redirect()->back()->with(['success' => 'Event created successfully']);
     }
 
     /**
