@@ -9,5 +9,16 @@
         "axios": "^1.1.2",
         "laravel-vite-plugin": "^0.7.5",
         "vite": "^4.0.0"
+    },
+    "dependencies": {
+        "@ckeditor/ckeditor5-build-classic": "^38.0.1",
+        "@fullcalendar/core": "^6.1.8",
+        "@fullcalendar/daygrid": "^6.1.8",
+        "@fullcalendar/resource": "^6.1.8",
+        "@fullcalendar/resource-timeline": "^6.1.8",
+        "@fullcalendar/timegrid": "^6.1.8",
+        "jquery-clock-timepicker": "^2.6.4",
+        "jquery-datetimepicker": "^2.5.21",
+        "toastr": "^2.1.4"
     }
 }
